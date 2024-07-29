@@ -30,7 +30,7 @@ const FoodItem = ({id,name,description,price,image}) => {
             <p className="food-item-price">${price}</p>
         </div>
     </div>
-  )
+)
 }
 
 export default FoodItem
