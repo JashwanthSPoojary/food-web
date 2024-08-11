@@ -46,7 +46,7 @@
 .cart-total button{
     border: none;
     color: white;
-    background-color: tomato;
+    background-color: #2962ff;
     width: max(15vw,200px);
     padding: 12px 0px;
     border-radius: 4px;
@@ -82,6 +82,9 @@
 }
 
 @media (max-width:750px) {
+    .cart{
+        margin-top: 20px;
+    }
     .cart-bottom{
         flex-direction: column-reverse;
     }

@@ -3,7 +3,8 @@
 }
 .food-display h2{
     font-size: max(2vw,24px);
-    font-weight: 600;
+    font-weight: 500;
+    color: #2962ff;
 }
 .food-display-list{
     display: grid; 

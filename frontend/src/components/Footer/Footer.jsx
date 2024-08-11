@@ -1,39 +1,37 @@
-import React from 'react'
 import './Footer.css'
-import { assets } from '../../assets/frontend_assets/assets'
 
 const Footer = () => {
   return (
-    <div className='footer' id='footer'>
-        <div className="footer-content">
-        <div className="footer-content-left">
-            <img src={assets.logo} alt="" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, explicabo molestiae cupiditate ex corporis quae illum aut perspiciatis debitis iusto suscipit aspernatur aliquid delectus odio facere. Voluptates optio porro ipsum?</p>
-            <div className="footer-social-icons">
-                <img src={assets.facebook_icon} alt="" />
-                <img src={assets.twitter_icon} alt="" />
-                <img src={assets.linkedin_icon} alt="" />
+    <div className="footer" id='footer'>
+        <div className="footer-heading">
+            <h2>WE COOK ONLY <span>THE MOST <br /> DELICIOUS</span> MEALS</h2>
+        </div>
+        <div className="footer-links">
+            <div className="footer-link">
+                <h4>ADDRESS</h4>
+                <p>India - <br />
+                785 Street , Office 478 <br />
+                Bengaluru , 573412
+                </p>
+            </div>
+            <div className="footer-link">
+                <h4>SAY HELLO</h4>
+                <p>info@email.com</p>
+                <p>+91 9876543210</p>
+            </div>
+            <div className="footer-link">
+                <h4>SOCIALS</h4>
+                <p>Facebook</p>
+                <p>Linkdin</p>
+                <p>Instagram</p>
+                <p>X.com</p>
             </div>
         </div>
-        <div className="footer-content-center">
-            <h2>COMPANY</h2>
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Delivery</li>
-                <li>Privacy policy</li>
-            </ul>
+        <div className="footer-foot">
+            <hr />
+            <p>JashWanthSPoojary @ 2024 . All Rights Reserved </p>
         </div>
-        <div className="footer-content-right">
-            <h2>GET IN TOUCH</h2>
-            <ul>
-                <li>+1-222-333-44</li>
-                <li>contact@tomato.com</li>
-            </ul>
-        </div>
-        </div>
-        <hr />
-        <p className='footer-copyright'>Copyright 2024 Tomato.com - All Right Reserved.</p>
+
     </div>
   )
 }

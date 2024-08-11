@@ -1,7 +1,9 @@
-import React, { useContext} from 'react'
+import  { useContext} from 'react'
 import './FoodItem.css'
 import { assets } from '../../assets/frontend_assets/assets'
 import { StoreContext } from '../../context/StoreContext';
+import { FaCircleMinus } from "react-icons/fa6";
+import { FcPlus } from "react-icons/fc";
 
 const FoodItem = ({id,name,description,price,image}) => {
   const {cartItems,addToCart,removeFromCart,url} = useContext(StoreContext);
@@ -13,21 +15,21 @@ const FoodItem = ({id,name,description,price,image}) => {
             {/* logic for the add button in the cart */}
             {
               !cartItems[id]
-              ?<img className='add' onClick={()=>addToCart(id)} src={assets.add_icon_white} alt=" img "/>
+              ?<div className="add"><FcPlus size={30} onClick={()=>addToCart(id)} /></div>
               :<div className='food-item-counter'>
-                <img onClick={()=>removeFromCart(id)} src={assets.remove_icon_red} alt="" />
+                {/* <img onClick={()=>removeFromCart(id)} src={assets.remove_icon_red} alt="" /> */}
+                <FaCircleMinus size={25} color='red' onClick={()=>removeFromCart(id)}/>
                 <p>{cartItems[id]}</p>
-                <img onClick={()=>addToCart(id)} src={assets.add_icon_green} alt="" />
+                <FcPlus size={25} onClick={()=>addToCart(id)}/>
               </div>
             }
         </div>
         <div className="food-item-info">
             <div className="food-item-name-rating">
                 <p>{name}</p>
-                <img src={assets.rating_starts} alt="" />
+                <p className="food-item-price">${price}</p>
             </div>
             <p className="food-item-desc">{description}</p>
-            <p className="food-item-price">${price}</p>
         </div>
     </div>
 )
