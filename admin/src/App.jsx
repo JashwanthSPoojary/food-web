@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar/Navbar"
 import Sidebar from "./components/Sidebar/Sidebar"
 import {Route, Routes} from 'react-router-dom'
 import Add from './pages/Add/Add.jsx'
@@ -9,12 +8,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const App = () => {
-  const url = "https://food-backend-rtmk.onrender.com"
+  const url = 'https://food-backend-rtmk.onrender.com'
   return (
     <div>
       <ToastContainer/>
-      <Navbar/>
-      <hr />
       <div className="app-content">
         <Sidebar/>
         <Routes>
